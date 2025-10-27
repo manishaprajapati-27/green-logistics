@@ -1,0 +1,131 @@
+ .card:hover .animate-flip-straight {
+    animation: flipIn 0.8s ease-in-out forwards;
+  }
+
+
+//   Flip In 
+  @keyframes flipIn {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+
+  @keyframes flipUp {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes slideMove {
+  0% {
+    -webkit-transform: translateZ(0) translateY(-50%);
+    transform: translateZ(0) translateY(-50%);
+  }
+  50% {
+    -webkit-transform: translate3d(15px, 0, 0) translateY(-50%);
+    transform: translate3d(15px, 0, 0) translateY(-50%);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(-50%);
+    transform: translateZ(0) translateY(-50%);
+  }
+}
+
+// Horizontal Move
+@keyframes horizontalMove {
+  0% {
+    transform: translateZ(0);
+  }
+  50% {
+    transform: translate3d(-15px, 0, 0);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes horizontalMove2 {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  50% {
+    -webkit-transform: translate3d(-15px, 0, 0);
+    transform: translate3d(-15px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes zump {
+  0% {
+    transform: translateZ(0);
+  }
+  50% {
+    transform: translate3d(0, -15px, 0);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes zumpBottom {
+  0% {
+    transform: translateZ(0);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
