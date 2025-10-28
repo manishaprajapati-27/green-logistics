@@ -568,13 +568,13 @@ const Header = () => {
       <div className="shape z-10"></div>
 
       <div
-        className={`bg-[#000000d8] fixed h-screen w-screen z-40 transform transition-all duration-500 ease-in-out ${
-          headerActive ? "translate-x-[0%] opacity-100 left-0 top-0" : "delay-500 translate-x-[-100%] opacity-0"
+        className={`bg-[#000000d8] fixed h-screen w-screen z-40 transform transition-all duration-500 ease-in-out left-0 top-0 ${
+          headerActive ? "translate-x-[0%] opacity-100" : "delay-500 translate-x-[-100%] opacity-0"
         }`}
       ></div>
       <div
-        className={`mob-sidebar bg-secondary py-12 px-4 fixed h-screen w-[41%] z-50 transform transition-all delay-300 duration-500 ease-in-out overflow-y-scroll ${
-          headerActive ? "translate-x-[0%] opacity-100 left-0 top-0" : "delay-0 translate-x-[-100%] opacity-0"
+        className={`mob-sidebar bg-secondary py-12 px-4 fixed h-screen w-[41%] z-50 transform transition-all delay-300 duration-500 ease-in-out left-0 top-0 overflow-y-scroll ${
+          headerActive ? "translate-x-[0%] opacity-100" : "delay-0 translate-x-[-100%] opacity-0"
         }`}
       >
         <div className="logo py-9">
@@ -591,7 +591,7 @@ const Header = () => {
         <ul className="">
           <li>
             <Link
-              to="/"
+              to="/" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               Home
@@ -599,7 +599,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/about"
+              to="/about" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               About
@@ -630,13 +630,13 @@ const Header = () => {
             <ul
               className={`transition-all duration-500 ease-in-out ${
                 sbDropdown.dropdown1.open
-                  ? "max-h-[1000px] opacity-100"
-                  : "max-h-0 opacity-0"
+                  ? "max-h-[1000px] opacity-100 pointer-events-auto"
+                  : "max-h-0 opacity-0 pointer-events-none"
               }`}
             >
               <li className="relative group/submenu">
                 <Link
-                  to="/services"
+                  to="/services" onClick={() => setHeaderActive(false)}
                   className={`p-2.5 ps-5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] flex justify-between items-center ${
                     sbDropdown.dropdown1.subMenu.sub1
                       ? "text-primary"
@@ -756,7 +756,7 @@ const Header = () => {
               </li> */}
               <li>
                 <a
-                  href="#!"
+                  href="#!" 
                   className="text-white p-2.5 ps-5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
                 >
                   Safety Reliable Serice
@@ -812,7 +812,7 @@ const Header = () => {
             >
               Shop
               <button
-                onClick={() => toggleDropdown("dropdown1")}
+                onClick={() => toggleDropdown("dropdown2")}
                 className={`h-8 w-8 bg-primary text-white flex justify-center items-center transition-all duration-500 ease-in-out ${
                   sbDropdown.dropdown2.open ? "bg-white text-primary" : ""
                 }`}
@@ -829,13 +829,13 @@ const Header = () => {
             <ul
               className={`transition-all duration-500 ease-in-out ${
                 sbDropdown.dropdown2.open
-                  ? "max-h-[1000px] opacity-100"
-                  : "max-h-0 opacity-0"
+                  ? "max-h-[1000px] opacity-100 pointer-events-auto"
+                  : "max-h-0 opacity-0 pointer-events-none"
               }`}
             >
               <li className="relative group/submenu">
                 <Link
-                  to="/products"
+                  to="/products" onClick={() => setHeaderActive(false)}
                   className={`p-2.5 ps-5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] flex justify-between items-center ${
                     sbDropdown.dropdown2.subMenu.sub1
                       ? "text-primary"
@@ -847,7 +847,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/product-details"
+                  to="/product-details" onClick={() => setHeaderActive(false)}
                   className="text-white p-2.5 ps-5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
                 >
                   Product Details
@@ -881,7 +881,7 @@ const Header = () => {
           </li> */}
           <li>
             <Link
-              to="/blog"
+              to="/blog" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               Blog
@@ -889,7 +889,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/gallery"
+              to="/gallery" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               Gallery
@@ -897,7 +897,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/contact"
+              to="/contact" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark block"
             >
               Contact
@@ -1325,17 +1325,17 @@ const Header = () => {
       <div className="shape z-10"></div>
 
          <div
-        className={`bg-[#000000d8] fixed h-screen w-screen z-40 transform transition-all duration-500 ease-in-out ${
-          cloneHeaderActive ? "translate-x-[0%] opacity-100 left-0 top-0" : "delay-500 translate-x-[-100%] opacity-0"
+        className={`bg-[#000000d8] fixed h-screen w-screen z-40 transform transition-all duration-500 ease-in-out left-0 top-0 ${
+          cloneHeaderActive ? "translate-x-[0%] opacity-100" : "delay-500 translate-x-[-100%] opacity-0"
         }`}
       ></div>
       <div
-        className={`mob-sidebar bg-secondary py-12 px-4 fixed h-screen w-[41%] z-50 transform transition-all delay-300 duration-500 ease-in-out overflow-y-scroll ${
-          cloneHeaderActive ? "translate-x-[0%] opacity-100 left-0 top-0" : "delay-0 translate-x-[-100%] opacity-0"
+        className={`mob-sidebar bg-secondary py-12 px-4 fixed h-screen w-[41%] z-50 transform transition-all delay-300 duration-500 ease-in-out left-0 top-0 overflow-y-scroll ${
+          cloneHeaderActive ? "translate-x-[0%] opacity-100" : "delay-0 translate-x-[-100%] opacity-0"
         }`}
       >
         <div className="logo py-9">
-          <Link to="/">
+          <Link to="/" onClick={() => setHeaderActive(false)}>
             <img src={lightLogo} alt="Green Logistics" width="152" />
           </Link>
         </div>
@@ -1348,7 +1348,7 @@ const Header = () => {
         <ul className="">
           <li>
             <Link
-              to="/"
+              to="/" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               Home
@@ -1356,7 +1356,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/about"
+              to="/about" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               About
@@ -1387,13 +1387,13 @@ const Header = () => {
             <ul
               className={`transition-all duration-500 ease-in-out ${
                 sbDropdown.dropdown1.open
-                  ? "max-h-[1000px] opacity-100"
-                  : "max-h-0 opacity-0"
+                  ? "max-h-[1000px] opacity-100 pointer-events-auto"
+                  : "max-h-0 opacity-0 pointer-events-none"
               }`}
             >
               <li className="relative group/submenu">
                 <Link
-                  to="/services"
+                  to="/services" onClick={() => setHeaderActive(false)}
                   className={`p-2.5 ps-5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] flex justify-between items-center ${
                     sbDropdown.dropdown1.subMenu.sub1
                       ? "text-primary"
@@ -1569,7 +1569,7 @@ const Header = () => {
             >
               Shop
               <button
-                onClick={() => toggleDropdown("dropdown1")}
+                onClick={() => toggleDropdown("dropdown2")}
                 className={`h-8 w-8 bg-primary text-white flex justify-center items-center transition-all duration-500 ease-in-out ${
                   sbDropdown.dropdown2.open ? "bg-white text-primary" : ""
                 }`}
@@ -1586,13 +1586,13 @@ const Header = () => {
             <ul
               className={`transition-all duration-500 ease-in-out ${
                 sbDropdown.dropdown2.open
-                  ? "max-h-[1000px] opacity-100"
-                  : "max-h-0 opacity-0"
+                  ? "max-h-[1000px] opacity-100 pointer-events-auto"
+                  : "max-h-0 opacity-0 pointer-events-none"
               }`}
             >
               <li className="relative group/submenu">
                 <Link
-                  to="/products"
+                  to="/products" onClick={() => setHeaderActive(false)}
                   className={`p-2.5 ps-5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] flex justify-between items-center ${
                     sbDropdown.dropdown2.subMenu.sub1
                       ? "text-primary"
@@ -1604,7 +1604,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/product-details"
+                  to="/product-details" onClick={() => setHeaderActive(false)}
                   className="text-white p-2.5 ps-5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
                 >
                   Product Details
@@ -1630,7 +1630,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/blog"
+              to="/blog" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               Blog
@@ -1638,7 +1638,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/gallery"
+              to="/gallery" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark border-b-[0.7px] border-[#848e84a1] block"
             >
               Gallery
@@ -1646,7 +1646,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/contact"
+              to="/contact" onClick={() => setHeaderActive(false)}
               className="text-white p-2.5 font-semibold text-[15px] group-hover:text-dark block"
             >
               Contact

@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className="bg-secondary pt-30 relative overflow-x-hidden">
       <div className="bg-[url('src/assets/images/footer/footer-bg.jpg')] bg-cover bg-no-repeat bg-center absolute top-0 left-0 w-full h-full opacity-65 after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[#063d1de3]"></div>
       <div className="container mx-auto relative z-30 md:px-0 px-4">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 md:gap-8 gap-y-8">
           <div className="lg:col-span-4 md:col-span-7 col-span-12">
             <MotionTag variant={fadeUp} trigger="view" className="relative after:content-[''] after:bg-[#15b01ad5] after:top-[-7.5rem] after:left-0 after:h-[calc(100%+7.5rem)] after:w-full after:absolute">
               <img

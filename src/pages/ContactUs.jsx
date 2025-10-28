@@ -11,6 +11,9 @@ import {
   FaBars,
   FaArrowRightLong,
 } from "react-icons/fa6";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { IoMdMail } from "react-icons/io";
+import { MotionTag, fadeUp } from "../components/Animation";
 
 const ContactUs = () => {
   return (
@@ -18,31 +21,35 @@ const ContactUs = () => {
       <PageHero title="Contact Us" page="Contact Us" />
       <div className="pt-30">
         <div className="container mx-auto md:px-0 px-4">
-          <Heading
-            classes="flex justify-center items-center flex-col lg:w-[50%] md:w-[70%] w-full mx-auto relative z-100 pb-14"
-            subHeading="Latest Projects"
-            heading="Our recently Completed Latest Projects"
-            hdClasses="text-center"
-          />
+          <MotionTag>
+            <Heading
+              classes="flex justify-center items-center flex-col lg:w-[50%] md:w-[70%] w-full mx-auto relative z-100 pb-14"
+              subHeading="Latest Projects"
+              heading="Our recently Completed Latest Projects"
+              hdClasses="text-center"
+            />
+          </MotionTag>
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-0">
             <div className="relative md:w-[80%] mx-auto w-full lg:w-full after:content-[''] after:absolute after:w-full after:h-[87%] after:top-0 after:left-0 after:bg-secondary">
+              {/* <MotionTag> */}
               <img
                 src={ContactImg}
                 className="ps-12 relative z-10 pt-12 w-full h-full object-cover object-center"
                 alt="Contact"
               />
+              {/* </MotionTag> */}
             </div>
             <div className="relative flex flex-col justify-end lg:mt-0 mt-10 pt-[18rem]">
               <div className="bg-secondary lg:w-[85%] md:w-[70%] w-full z-20 absolute top-0 left-0">
                 <div className="flex items-center gap-5 relative group py-4 px-7  border-b border-[#ffffff96]">
                   <div className="rounded-full overflow-hidden transition-all duration-500 ease-in-out flex justify-center items-center bg-white text-primary h-[50px] w-[50px] group-hover:bg-primary group-hover:text-white">
-                    <FaLocationDot />
+                    <BiSolidPhoneCall className="text-[20px]" />
                   </div>
                   <div className="">
                     <h6 className="font-semibold text-light text-[1.06rem] transition-all duration-500 ease-in-out">
                       Call for Details?
                     </h6>
-                    <h4 className="text-white font-bold text-[20px] mb-0 transition-all duration-500 ease-in-out group-hover:text-white">
+                    <h4 className="text-white font-bold text-[18px] mb-0 transition-all duration-500 ease-in-out group-hover:text-white">
                       <a
                         href="#!"
                         className="bg-[linear-gradient(to_right,#063d1d_0%,#063d1d_100%)] bg-[0px_95%] bg-[length:0px_1px] bg-no-repeat transition-all duration-500 hover:bg-[length:100%_1px] text-white hover:text-primary hover:bg-[linear-gradient(to_right,#15b01b_0%,#15b01b_100%)]"
@@ -54,72 +61,72 @@ const ContactUs = () => {
                 </div>
                 <div className="flex items-center gap-5 relative group py-4 px-7  border-b border-[#ffffff96]">
                   <div className="rounded-full overflow-hidden transition-all duration-500 ease-in-out flex justify-center items-center bg-white text-primary h-[50px] w-[50px] group-hover:bg-primary group-hover:text-white">
-                    <FaLocationDot />
+                    <IoMdMail className="text-[20px]" />
                   </div>
                   <div className="">
                     <h6 className="font-semibold text-light text-[1.06rem] transition-all duration-500 ease-in-out">
-                      Call for Details?
+                      Send Email
                     </h6>
-                    <h4 className="text-white font-bold text-[20px] mb-0 transition-all duration-500 ease-in-out group-hover:text-white">
+                    <h4 className="text-white font-bold text-[18px] mb-0 transition-all duration-500 ease-in-out group-hover:text-white">
                       <a
                         href="#!"
                         className="bg-[linear-gradient(to_right,#063d1d_0%,#063d1d_100%)] bg-[0px_95%] bg-[length:0px_1px] bg-no-repeat transition-all duration-500 hover:bg-[length:100%_1px] text-white hover:text-primary hover:bg-[linear-gradient(to_right,#15b01b_0%,#15b01b_100%)]"
                       >
-                        Free + 23(000)-8050
+                        demo@gmail.com
                       </a>
                     </h4>
                   </div>
                 </div>
                 <div className="flex items-center gap-5 relative group py-4 px-7  border-b border-[#ffffff96]">
                   <div className="rounded-full overflow-hidden transition-all duration-500 ease-in-out flex justify-center items-center bg-white text-primary h-[50px] w-[50px] group-hover:bg-primary group-hover:text-white">
-                    <FaLocationDot />
+                    <FaLocationDot className="text-[20px]" />
                   </div>
                   <div className="">
                     <h6 className="font-semibold text-light text-[1.06rem] transition-all duration-500 ease-in-out">
-                      Call for Details?
+                      Visit Anytime
                     </h6>
-                    <h4 className="text-white font-bold text-[20px] mb-0 transition-all duration-500 ease-in-out group-hover:text-white">
+                    <h4 className="text-white font-bold text-[18px] mb-0 transition-all duration-500 ease-in-out group-hover:text-white">
                       <a
                         href="#!"
                         className="bg-[linear-gradient(to_right,#063d1d_0%,#063d1d_100%)] bg-[0px_95%] bg-[length:0px_1px] bg-no-repeat transition-all duration-500 hover:bg-[length:100%_1px] text-white hover:text-primary hover:bg-[linear-gradient(to_right,#15b01b_0%,#15b01b_100%)]"
                       >
-                        Free + 23(000)-8050
+                        Parel, Mumbai, India
                       </a>
                     </h4>
                   </div>
                 </div>
               </div>
-              <div className="relative p-10 after:content-[''] after:absolute after:w-full after:h-[112%] after:top-[-12%] after:left-0 after:border lg:after:border-l-0 lg:after:border-b-1 after:border-b-0 after:border-secondary">
+              <MotionTag className="relative p-10 after:content-[''] after:absolute after:w-full after:h-[112%] after:top-[-12%] after:left-0 after:border lg:after:border-l-0 lg:after:border-b-1 after:border-b-0 after:border-secondary">
                 <div className="relative z-20">
                   <h4 className="text-secondary text-[30px] font-bold mb-7 leading-10 lg:w-[85%] md:w-[70%] w-full">
-                  Get In Touch with Us and Enjoy Top- Notch Support
-                </h4>
-                <div className="mb-4">
-                  <input
-                    type="text"
-                    className="bg-[#f2f2f2] text-[16px] font-semibold px-7 py-4 outline-0 border border-[#f2f2f2] focus:border-primary w-full"
-                    placeholder="Your Name"
+                    Get In Touch with Us and Enjoy Top- Notch Support
+                  </h4>
+                  <div className="mb-4">
+                    <input
+                      type="text"
+                      className="bg-[#f2f2f2] text-[16px] font-semibold px-7 py-4 outline-0 border border-[#f2f2f2] focus:border-primary w-full"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <input
+                      type="text"
+                      className="bg-[#f2f2f2] text-[16px] font-semibold px-7 py-4 outline-0 border border-[#f2f2f2] focus:border-primary w-full"
+                      placeholder="Email Address"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <textarea
+                      className="bg-[#f2f2f2] text-[16px] font-semibold px-7 py-4 outline-0 border border-[#f2f2f2] focus:border-primary w-full h-38"
+                      placeholder="Write Message..."
+                    ></textarea>
+                  </div>
+                  <Button
+                    className="btn-primary font-semibold btn-large"
+                    title="Send Message"
                   />
                 </div>
-                <div className="mb-4">
-                  <input
-                    type="text"
-                    className="bg-[#f2f2f2] text-[16px] font-semibold px-7 py-4 outline-0 border border-[#f2f2f2] focus:border-primary w-full"
-                    placeholder="Email Address"
-                  />
-                </div>
-                <div className="mb-4">
-                  <textarea
-                    className="bg-[#f2f2f2] text-[16px] font-semibold px-7 py-4 outline-0 border border-[#f2f2f2] focus:border-primary w-full h-38"
-                    placeholder="Write Message..."
-                  ></textarea>
-                </div>
-                <Button
-                  className="btn-primary font-semibold btn-large"
-                  title="Send Message"
-                />
-                </div>
-              </div>
+              </MotionTag>
             </div>
           </div>
         </div>

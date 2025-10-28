@@ -69,6 +69,7 @@ const Blog = () => {
       }),
       month: new Date().toLocaleDateString("en-GB", {
         month: "long",
+        
       }),
       userName: "Jerome Bell",
       designation: "Admin",
@@ -112,7 +113,7 @@ const Blog = () => {
       <PageHero title="Blog" page="Blog" />
       <div className="py-30">
         <div className="container mx-auto lg:px-0 px-4">
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
             {blogs.map((blog) => (
               <MotionTag>
                 <div className="card shadow-2xl mb-5 h-full group relative transition-all duration-500 ease-in-out after:transition-all nth-last-1:mb-0 after:duration-500 after:ease-in-out">
